@@ -51,8 +51,14 @@ const questions = [
             name: 'email',
         },
     ];
-
-inquirer.prompt(questions);
+    
+inquirer.prompt(questions)
+.then((response) => {
+    console.log(response)
+    fs.writeFile('./results/response.md', JSON.stringify(response, null, '\t'), (err) =>
+      err ? console.log(err) : console.log('success')
+    );
+});
 
 
 
