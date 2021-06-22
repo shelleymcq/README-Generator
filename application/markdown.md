@@ -1,25 +1,24 @@
  
 # README Generator
-## Description
-This app will allow a user to create a professional and polished readme.md file from the command line.
-## Table of Contents
-[Installation](#installation)
-[Usage](#usage)
-[License](#license)
-[Contributors](#contributors)
-[Testing](#test)
-[Contact Me](#email)
-## Installation Instructions
-Install this package along with inquirer, fs, and util.
-## Usage
-
 ## License
-MIT License
+The Unlicense
+## Description
+This app will allow the user to
+## Table of Contents
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributors](#Contributors)
+* [Testing](#Testing)
+* [Questions](#Questions)
+## Installation
+Install it
+## Usage
+Use it
 ## Contributors
-all me
+Just me
 ## Testing
+Test it
+## Questions 
+#### To contribute, please contact me by email with any recommended changes.
 
-## Github 
-shelleymcq
-## Contact
-shelleymcq.dev@gmail.com
+github.com/shelleymcq or email me at shelleymcq.dev@gmail.com

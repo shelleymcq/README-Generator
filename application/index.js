@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
+
 const writeFileAsync = util.promisify(fs.writeFile)
 
 const getInput = () => {
@@ -33,7 +34,7 @@ const getInput = () => {
             type: 'list',
             message: 'Choose license.',
             name: 'license',
-            choices: ['MIT License', 'Eclipse Public License 2.0', 'Mozilla Public Liscense 2.0']
+            choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause Simplified License', 'BSD 3-Clause New or Revised License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser Genergal Public License v2.1', 'Mozilla Public Liscense 2.0', 'The Unlicense']
         },
         {
             type: 'input',
@@ -58,31 +59,33 @@ const getInput = () => {
     ]);
 }
 
-const generateMarkdown = (answers) => ` 
+
+const generateMarkdown = (answers) => 
+
+` 
 # ${answers.title}
+## License
+${answers.license}
 ## Description
 ${answers.description}
 ## Table of Contents
-[Installation](#installation)
-[Usage](#usage)
-[License](#license)
-[Contributors](#contributors)
-[Testing](#test)
-[Contact Me](#email)
-## Installation Instructions
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributors](#Contributors)
+* [Testing](#Testing)
+* [Questions](#Questions)
+## Installation
 ${answers.installation}
 ## Usage
 ${answers.usage}
-## License
-${answers.license}
 ## Contributors
 ${answers.contributors}
 ## Testing
 ${answers.test}
-## Github 
-${answers.username}
-## Contact
-${answers.email}
+## Questions 
+#### To contribute, please contact me by email with any recommended changes.
+
+github.com/${answers.username} or email me at ${answers.email}
 `;
 
 const init = () => {
