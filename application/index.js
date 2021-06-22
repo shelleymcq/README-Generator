@@ -1,9 +1,14 @@
 // packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
 
-// array of questions for user input
-const questions = [
+const writeFileAsync = util.promisify(fs.writeFile)
+
+const getInput = () => {
+    return inquirer.prompt(
+    // array of questions for user input
+    [
         {
             type: 'input',
             message: 'Enter title of project.',
@@ -38,7 +43,7 @@ const questions = [
         {
             type: 'input',
             message: 'Enter test instructions.',
-            name: 'tests',
+            name: 'test',
         },
         {
             type: 'input',
@@ -50,15 +55,48 @@ const questions = [
             message: 'Enter contact email.',
             name: 'email',
         },
-    ];
+    ]);
+}
+
+const generateMarkdown = (answers) => ` 
+# ${answers.title}
+## Description
+${answers.description}
+## Table of Contents
+## Installation Instructions
+${answers.installation}
+## Usage
+${answers.usage}
+## License
+${answers.license}
+## Contributors
+${answers.contributors}
+## Testing
+${answers.test}
+## Github 
+${answers.username}
+## Contact
+${answers.email}
+`;
+
+const init = () => {
+    getInput()
+    .then((answers) => writeFileAsync('markdown.md', generateMarkdown(answers)))
+    .then(() => console.log('Successfully wrote to markdown.md'))
+    .catch((err) => console.error(err));
+};
+
+init()
+
+// .then((response) => {
+//     console.log(`${response.title} and ${response.description}`);
     
-inquirer.prompt(questions)
-.then((response) => {
-    console.log(response)
-    fs.writeFile('./results/response.md', JSON.stringify(response, null, '\t'), (err) =>
-      err ? console.log(err) : console.log('success')
-    );
-});
+//     // fs.writeFile('./results/response.md', JSON.stringify(response, null, '\t'), (err) =>
+//     //   err ? console.log(err) : console.log('success')
+//     // );
+// });
+
+
 
 
 
@@ -67,11 +105,8 @@ inquirer.prompt(questions)
 // function to write README file
 // function writeToFile(fileName, data) {}
 
-
-
 // function to initialize app
 // function init() {}
-
 
 // function call to initialize app
 // init();
