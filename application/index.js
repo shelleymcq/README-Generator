@@ -63,6 +63,12 @@ const generateMarkdown = (answers) => `
 ## Description
 ${answers.description}
 ## Table of Contents
+[Installation](#installation)
+[Usage](#usage)
+[License](#license)
+[Contributors](#contributors)
+[Testing](#test)
+[Contact Me](#email)
 ## Installation Instructions
 ${answers.installation}
 ## Usage
@@ -88,27 +94,5 @@ const init = () => {
 
 init()
 
-// .then((response) => {
-//     console.log(`${response.title} and ${response.description}`);
-    
-//     // fs.writeFile('./results/response.md', JSON.stringify(response, null, '\t'), (err) =>
-//     //   err ? console.log(err) : console.log('success')
-//     // );
-// });
-
-
-
-
-
-
-
-// function to write README file
-// function writeToFile(fileName, data) {}
-
-// function to initialize app
-// function init() {}
-
-// function call to initialize app
-// init();
 
 
