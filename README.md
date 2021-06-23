@@ -14,7 +14,10 @@ This application will allow a user to create a professional README file from the
 Fork this repo and clone it to your computer. Then install inquirer in the appropriate directory.
 ## Usage
 Run node index.js from the command line to initialize the application. Answer each prompt with all the information you wish to include in your README. After answering the prompts, the README file will automatically be generated in the same directory. See the video below for a demonstration.
-![Demo Video](/README-demo-video.gif)
+
+![Demo Video](README-demo-video.gif)
+
+![Links Demo](links-demo.gif)
 ## Contributors
 Me
 ## Testing
