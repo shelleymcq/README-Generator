@@ -98,7 +98,7 @@ ${answers.test}
 ## Questions 
 #### To contribute, please contact me by email.
 
-[github.com/${answers.username}](github.com/${answers.username}) or email me at ${answers.email}
+https://github.com/${answers.username} or email me at ${answers.email}
 `;
 
 const init = () => {

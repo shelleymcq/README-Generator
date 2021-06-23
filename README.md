@@ -22,4 +22,4 @@ None
 ## Questions 
 #### To contribute, please contact me by email.
 
-[github.com/shelleymcq](github.com/shelleymcq) or email me at shelleymcq.dev@gmail.com
+https://github.com/shelleymcq or email me at shelleymcq.dev@gmail.com
