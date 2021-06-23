@@ -79,8 +79,6 @@ const generateMarkdown = (answers) =>
 # ${answers.title}
 ## Licensing:
 #### _${answers.license}_
----
----
 ## Description
 ${answers.description}
 ## Table of Contents
@@ -100,7 +98,7 @@ ${answers.test}
 ## Questions 
 #### To contribute, please contact me by email.
 
-github.com/${answers.username} or email me at ${answers.email}
+[github.com/${answers.username}](github.com/${answers.username}) or email me at ${answers.email}
 `;
 
 const init = () => {
