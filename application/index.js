@@ -3,7 +3,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
-
 const writeFileAsync = util.promisify(fs.writeFile)
 
 // prompts for each section of the README
@@ -52,7 +51,7 @@ const getInput = () => {
         },
         {
             type: 'input',
-            message: 'Enter other contributors. Skip if none.',
+            message: 'Enter all contributors.',
             name: 'contributors',
         },        
         {
@@ -103,7 +102,6 @@ ${answers.test}
 
 github.com/${answers.username} or email me at ${answers.email}
 `;
-
 
 const init = () => {
     getInput()
