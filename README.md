@@ -7,8 +7,6 @@ This application will allow a user to create a professional README file from the
 ## Table of Contents
 * [Installation](#Installation)
 * [Usage](#Usage)
-* [Contributors](#Contributors)
-* [Testing](#Testing)
 * [Questions](#Questions)
 ## Installation
 Fork this repo and clone it to your computer. Then install inquirer in the appropriate directory.
@@ -18,10 +16,6 @@ Run node index.js from the command line to initialize the application. Answer ea
 ![Demo Video](README-demo-video.gif)
 
 ![Links Demo](links-demo.gif)
-## Contributors
-Me
-## Testing
-None
 ## Questions 
 #### To contribute, please contact me by email.
 
